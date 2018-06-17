@@ -1,0 +1,25 @@
+$dark-color: #28363d;
+$blue-color: #1ed6cb;
+$white-color: #fff;
+$grey-color: #8198a0;
+
+$dark-bg: #28363d;
+$blue-bg: #1ed6cb;
+$white-bg: #fff;
+
+
+@mixin media($width) 
+	@media screen and (max-width: $width + "px") 
+		@content
+
+@import "_reset.sass"
+@import "_base.sass"
+@import "_icon.sass"
+@import "_header.sass"
+@import "_welcome.sass"
+@import "_why.sass"
+@import "_started.sass"
+@import "_latest-projects.sass"
+@import "_our.sass"
+@import "_footer.sass"
+

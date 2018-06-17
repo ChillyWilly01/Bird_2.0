@@ -1,0 +1,164 @@
+*
+	box-sizing: border-box
+	font-size: 16px
+
+a 
+	text-decoration: none
+	&:hover
+		outline: none
+	&:active
+		outline: none
+	&:focus
+		outline: none
+
+h1
+	font-size: 2.25rem
+	text-transform: uppercase
+
+h2
+	font-size: 1.5rem
+	text-transform: uppercase
+
+h3
+	font-size: 1rem
+	font-weight: 600
+	text-transform: uppercase
+
+p
+	font-size: 1.125rem
+	font-weight: 400
+	line-height: 36px	
+
+.clearfix:after
+	content: ''
+	clear: both
+	display: block
+	overflow: hidden
+
+.container
+	max-width: 1400px
+	padding: 0 15px
+	margin: 0 auto
+
+
+.btn__link
+	position: relative
+	display: inline-block
+	font-size: 0.825rem
+	font-weight: 600
+	text-transform: uppercase
+	border-radius: 10px
+	border-style: none
+	cursor: pointer
+	text-decoration: inherit
+	transition: .4s ease-out
+	
+	&::active
+		outline: none
+		text-decoration: none
+	
+
+.started__btn
+	border: 3px solid #fff
+	padding: 22px 88px 22px 59px
+	background-color: $white-bg
+	color: $dark-color
+	-moz-transition: all 0.5s ease-out
+	-o-transition: all 0.5s ease-out
+	-webkit-transition: all 0.5s ease-out
+	&:hover
+		-webkit-transform: scale(1.1)
+		-moz-transform: scale(1.1)
+		-o-transform: scale(1.1)
+	
+	&::after
+		content: url('../pic/sprite/arrow-blue__right.png')
+		position: absolute
+		right: 50px
+		top: 50%
+		transform: translateY(-50%)
+
+.subscribe__btn
+	color: $white-color
+	background-color: transparent
+	border: 3px solid #fff
+	padding: 22px 83px 21px 82px
+	&:hover
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+
+.title, .sub-title
+	position: relative
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+
+.title
+	font-size: 2.25rem
+
+.sub-title
+	font-size: 1.5rem
+	margin: 0 0 60px 0;
+
+.sub-title.decoration::after
+	content: url('../pic/sprite/separator.png');
+	position: absolute
+	bottom: -30px
+	left: 50%
+	transform: translateX(-50%)
+
+.row
+	@extend .clearfix
+
+@font-face
+	font-family: 'Proxima'
+	src: url('../fonts/ProximaNova-Regular.eot')
+
+/* icons style */
+// .icon
+// 	display: inline-block
+// 	vertical-align: top
+
+// .arrow-right-black__icon::after
+// 	content: url('../pic/arrow-black__right.png')
+
+// .male-user__icon::before
+// 	content: url('../pic/male-user.png')
+
+// .heart__icon::before
+// 	content: url('../pic/heart.png')
+
+// .wallet__icon::before
+// 	content: url('../pic/wallet.png')
+
+// .inst__icon::before
+// 	content: url('../pic/instagram-64.png')
+
+// .twitter__icon::before
+// 	content: url('../pic/twitter-64.png')
+
+// .facebook__icon::before
+// 	content: url('../pic/facebook-64.png')
+
+// .icon-clean-code::before
+// 	content: url('../pic/monitor-big.png')
+
+// .icon-magic-feature::before
+// 	content: url('../pic/magic-wand.png')
+
+// .icon-design::before
+// 	content: url('../pic/rocket.png')
+
+// .icon-globe::before
+// 	content: url('../pic/globe-2.png')
+
+// .icon-settings::before
+// 	content: url('../pic/settings.png')
+
+// .icon-modular::before
+// 	content: url('../pic/layers.png')
+
+// .icon-editable::before
+// 	content: url('../pic/wrench.png')
+
+// .icon-note::before
+// 	content: url('../pic/note.png')

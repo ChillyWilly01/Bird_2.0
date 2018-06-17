@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <div class="wrap">
+
+        @@include('./header.html')
+        @@include('./welcome.html')
+        @@include('./why.html')
+        @@include('./started.html')
+        @@include('./latest-projects.html')
+        @@include('./our.html')
+        @@include('./footer.html')
+
+    </div>
+
+
+
+    <script>
+
+        // scroll to the anchor
+        $(document).ready(function(){
+            $("#main__navigation").on("click","a", function (event) {
+                event.preventDefault();
+                var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 2000);
+            });
+        });
+
+        // hamburger-menu
+        $(function(){
+            var links = $('.slide__menu, .close_menu');
+            var menu = $('.m_main__navigation');
+
+            links.on('click', function(event) {
+                event.preventDefault();
+                menu.toggleClass('m_main__navigation__active');
+            });
+        });
+
+        //scroll to the anchor at mobile menu
+        $(document).ready(function(){
+            $(".m_main__navigation").on("click","a", function (event) {
+                event.preventDefault();
+                var id  = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 2000);
+                $(".m_main__navigation").toggleClass('m_main__navigation__active');
+            });
+        });
+
+        //slider
+        $(document).ready(function () {
+
+            var slideCount = $('.slider ul li').length;
+            var slideWidth = $('.slider ul li').width();
+            var slideHeight = $('.slider ul li').height();
+            var sliderUlWidth = slideCount * slideWidth;
+
+            $('.slider').css({ width: slideWidth, height: slideHeight });
+
+            $('.slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+            $('.slider ul li:last-child').prependTo('.slider ul');
+
+            function moveLeft() {
+                $('.slider ul').animate({
+                    left: + slideWidth
+                }, 200, function () {
+                    $('.slider ul li:last-child').prependTo('.slider ul');
+                    $('.slider ul').css('left', '');
+                });
+            };
+
+            function moveRight() {
+                $('.slider ul').animate({
+                    left: - slideWidth
+                }, 200, function () {
+                    $('.slider ul li:first-child').appendTo('.slider ul');
+                    $('.slider ul').css('left', '');
+                });
+            };
+
+            $('a.control_prev').click(function () {
+                moveLeft();
+            });
+
+            $('a.control_next').click(function () {
+                moveRight();
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

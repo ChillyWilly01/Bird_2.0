@@ -1,0 +1,242 @@
+.top-menu
+  @extend .clearfix
+
+#header__menu
+  position: relative
+  z-index: 2
+  width: 100%
+  height: 80px
+  background-image: url('../img/base.png')
+
+
+.logo
+  float: left
+  width: 85px
+  padding-top: 31px
+
+.your__logo
+  width: 100%
+
+
+#main__navigation
+  display: inline-block
+  width: 55%
+  text-align: center
+  line-height: 80px
+  +media(1150)
+    display: none
+    +media(525)
+      visibility: hidden
+      width: 100%
+      height: 100vh
+
+.menu__link
+  color: #6b848c
+  font-size: 0.75rem
+  font-weight: 400
+  text-transform: uppercase
+  padding: 0 10px 0 10px
+  display: inline-block
+  cursor: pointer
+  +media(525)
+    display: block
+    font-size: 0.93rem
+    line-height: 80px
+  &:active
+    //background-image: url('../img/selected.png')
+    //color: #fff
+    transition: all 0.5s ease;
+    background-color: red
+  &:hover
+    //background-image: url('../img/selected.png')
+    //transition: .4s ease-out
+    transition: all 0.5s ease;
+    background-color: red
+
+.m-menu
+  color: #6b848c
+  font-size: 0.75rem
+  font-weight: 400
+  text-transform: uppercase
+  padding: 0 10px 10px
+  display: block
+  cursor: pointer
+  text-align: center
+  &:active
+    background-image: url('../img/selected.png')
+    color: #fff
+  &:hover
+    background-image: url('../img/selected.png')
+    -webkit-transition: .4s ease-out
+    -moz-transition: .4s ease-out
+    -o-transition: .4s ease-out
+    transition: .4s ease-out
+
+.finder__menu
+  padding-top: 15px
+  float: right
+  +media(675)
+    padding-top: 30px
+
+.buy__button
+  padding: 15px 39px 14px 40px
+  border: 2px solid #1ed6cb
+  border-radius: 10px
+  white-space: nowrap
+  font-size: 0.75rem
+  text-transform: uppercase
+  color: #fff
+  display: inline-block
+  z-index: 3
+  +media(675)
+    display: none
+  &:hover
+    color: #1ed6cb
+    border: 2px solid #fff
+
+.find
+  background-image: url('../img/search.png')
+  width: 19px
+  height: 21px
+  padding-top: 25px
+  background-repeat: no-repeat
+  display: inline-block
+  margin-right: 31px
+  vertical-align: middle
+  border-style: none
+  background-color: #29373d
+  cursor: pointer
+  outline: none
+  +media(675)
+    margin-right: 0
+  &::placeholder
+    color: #29373d
+    opacity: 0.5
+
+  &:focus
+    width: 180px
+    border: 2px solid #1ed6cb
+    border-radius: 6px
+    font-size: 16px
+    background-color: $white-color
+    background-position: 6px 7px
+    padding: 18px 20px 18px 40px
+    -webkit-transition: width 0.6s ease-out
+    transition: width 0.6s ease-out
+    display: inline-block
+    +media(360)
+      width: 140px
+
+
+.slide__menu
+  background-image: url('../img/menu.png')
+  width: 16px
+  height: 13px
+  padding-top: 21px
+  background-repeat: no-repeat
+  display: none
+  margin-left: 40px
+  vertical-align: middle
+  border-style: none
+  background-color: transparent
+  cursor: pointer
+  outline: none
+  +media(1150)
+    display: inline-block
+    +media(390)
+      margin-left: 15px
+
+.m_main__navigation
+  position: fixed
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 999
+  list-style: none
+  font-size: 2.31rem
+  line-height: 70px
+  text-transform: uppercase
+  background-color: #28363d
+  margin: 0
+  padding: 0
+  transition: 0.2s
+  transform: translateX(100%)
+  li
+    width: 100%
+
+
+.m_main__navigation__active
+  transform: translateX(0%)
+
+.close_menu
+  position: fixed
+  right: 4%
+  top: 1%
+  font-weight: 900
+
+  &:hover
+    cursor: pointer
+
+.header-content
+  min-height: 100vh
+  position: relative
+  background-image: url('../img/your-image-here1.png')
+  background-position: 50% 100%
+  background-repeat: no-repeat
+  -webkit-background-size: cover
+  background-size: cover
+  vertical-align: top
+
+.header-title, .header-subtitleC
+  text-align: center
+  text-transform: uppercase
+
+.header-title
+  font-family: 'Proxima'
+  padding-top: 15%
+  font-weight: 700
+  font-size: 2rem
+  letter-spacing: 12.37px
+  line-height: 47.85px
+
+.header-subtitle
+  padding-top: 0
+  color: #8198a0
+  font-weight: 400
+  font-size: 1.5rem
+  letter-spacing: 8.25px
+  line-height: 48px
+  text-align: center
+
+
+.header-pointer
+  position: absolute
+  bottom: 4%
+  left: 50%
+  transform: translate(-50%, 0)
+  background-color: #3ddcd2
+  opacity: 0.4
+  border-radius: 50%
+  &:hover
+    opacity: 1
+  a
+    position: relative
+    border-radius: 50%
+    width: 53px
+    height: 53px
+    background-color: #3ddcd2
+    display: block
+    &::after
+      content: url('../img/icon-arrow.png')
+      position: absolute
+      left: 50%
+      top: 50%
+      -webkit-transform: translate(-50%, -50%)
+      -ms-transform: translate(-50%, -50%)
+      -o-transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%)
+
